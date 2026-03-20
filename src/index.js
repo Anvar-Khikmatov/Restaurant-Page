@@ -1,7 +1,2 @@
-console.log("Test");
-
-function add(){
-    return 5;
-}
-
-console.log(add());
+import './style.css'
+import './home.js'
