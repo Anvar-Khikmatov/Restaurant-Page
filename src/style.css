@@ -5,16 +5,22 @@
 
 :root{
     --background-color: #0f0f0f;
-    --main-content-margin-top: 6rem;
-    --main-content-margin-bottom: 6rem;
-    --main-section-width: 66vw;
-    --section-bottom-margin: 10rem;
-    --headers-margin-bottom: 1.5rem;
-    --section-header-font: 2rem;
-    --box-radius: 0.6rem;
     --secondary-background-color: #252323;
     --secondary-font-color: rgb(230, 142, 54);
     --third-font-color: rgb(222, 219, 213);
+    --third-font-size: 1rem;
+    --price-font-size: 1.3rem;
+    --foodName-font-size: 1.4rem;
+    --main-content-margin-top: 6rem;
+    --main-content-margin-bottom: 6rem;
+    --section-bottom-margin: 10rem;
+    --headers-margin-bottom: 1.5rem;
+    --foodBox-description-margin-top-bottom: 1rem 0;
+    --foodBox-description-padding: 1.5rem;
+    --main-section-width: 66vw;
+    --section-header-font: 2rem;
+    --box-radius: 0.6rem;
+
 }
 
 body{
@@ -22,6 +28,7 @@ body{
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: white;
 }
+
 
 h1,h2{
     margin-bottom: var(--headers-margin-bottom);
@@ -54,6 +61,10 @@ nav{
     margin-right: 2rem ;
 }
 
+.active-btn-colors{
+    color: var(--secondary-font-color);
+}
+
 nav button{
     background: none;
     border: none;
@@ -61,6 +72,10 @@ nav button{
     color: inherit;
     font: inherit;
     cursor: pointer;
+}
+
+nav button:hover{
+    color: var(--secondary-font-color);
 }
 
 
@@ -78,7 +93,6 @@ nav button{
 
 .section-1{
     min-height: 90vh;
-    /* background-color: antiquewhite; */
     margin-top: var(--main-content-margin-top);
     margin-bottom: var(--section-bottom-margin);
     display: flex;
@@ -162,7 +176,145 @@ nav button{
     line-height: 2;
 }
 
+.section-3 h2{
+    color: var(--secondary-font-color);
+}
+
 .section-3 p{
     color: var(--third-font-color);
     font-size: 1rem;
 }
+
+
+                                             /* Menu */
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--main-content-margin-top);
+}
+
+
+.menu h2{
+    margin-bottom: var(--headers-margin-bottom);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--main-section-width);
+}    
+
+.food-container{
+    width: var(--main-section-width);
+    margin-bottom: var(--section-bottom-margin);
+    min-height: 60vh;
+    display: flex;  
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.food-container-last{
+    width: var(--main-section-width);
+    margin-bottom: var(--main-content-margin-bottom);
+    min-height: 60vh;
+    display: flex;  
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.food-box{
+    flex: 0 0 calc(33.33% - 1rem);
+    background-color: var(--secondary-background-color);
+    border-radius: var(--box-radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}   
+
+.starterImg{
+    flex: 0 0 240px;
+    overflow: hidden;
+}
+
+.starterImg img{
+    width: 100%;
+    height: 100%;
+}
+
+.starterDetails1{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: var(--foodBox-description-padding);
+}
+
+.food-details-name{
+    margin: 0;
+    color: var(--secondary-font-color);
+    font-size: var(--foodName-font-size);
+}
+
+.food-details-description{
+    margin: var(--foodBox-description-margin-top-bottom);
+    line-height: 1.7;
+    color: var(--third-font-color);
+}
+
+.food-details-price{
+    font-size: var(--price-font-size);
+    font-weight: bold;
+}
+
+
+
+
+                            /* About */
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--main-content-margin-top);
+}
+
+.about-section{
+    background-color: var(--secondary-background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: var(--main-section-width);
+    margin-bottom: var(--section-bottom-margin);
+    padding: 2.5rem 2.5rem;
+    border-radius: var(--box-radius);
+}
+
+.about-section-last{
+    background-color: var(--secondary-background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: var(--main-section-width);
+    margin-bottom: var(--main-content-margin-bottom);
+    padding: 2.5rem 2.5rem;
+    border-radius: var(--box-radius);
+}
+
+.about-section-header{
+    color: var(--secondary-font-color);
+}
+
+.about-section-text{
+    color: var(--third-font-color);
+    line-height: 2;
+    display: flex;
+    text-align: center;
+}
+
