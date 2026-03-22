@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=MedievalSharp&family=Orbitron:wght@400..900&display=swap');
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -21,6 +23,12 @@
     --section-header-font: 2rem;
     --box-radius: 0.6rem;
 
+    --margin-topBottom-main-content-mobile: 2rem;
+    --font-section: 1.8rem;
+    --width-mobile: 85vw;
+    --section-bottom-margin-mobile: 6rem;
+    --foodName-font-size-mobile: 1.2rem;
+    --price-font-size-mobile: 1.2rem;
 }
 
 body{
@@ -29,6 +37,11 @@ body{
     color: white;
 }
 
+h1{
+    font-family: 'Javar', sans-serif;
+    text-align: center;
+    /* font-weight: 600; */
+}
 
 h1,h2{
     margin-bottom: var(--headers-margin-bottom);
@@ -36,6 +49,7 @@ h1,h2{
 
 h2{
     font-size: var(--section-header-font);
+    text-align: center;
 }
 
 h3{
@@ -52,7 +66,18 @@ header{
     justify-content: space-between;
     position: sticky;
     top: 0;
-    border-bottom: 1px solid var(--secondary-font-color)
+    border-bottom: 1px solid var(--secondary-font-color);
+    z-index: 10;
+}
+
+.header-logo {
+    max-width: auto;
+    max-height: 60px;
+    margin-left: 1.5rem;
+}
+
+.header-logo:hover {
+    cursor: pointer;
 }
 
 nav{
@@ -76,6 +101,26 @@ nav button{
 
 nav button:hover{
     color: var(--secondary-font-color);
+    filter: brightness(130%);
+}
+
+nav button {
+    position: relative;
+}
+
+nav button::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-font-color);
+    transition: width 0.2s ease;
+}
+
+nav button:hover::after {
+    width: 100%;
 }
 
 
@@ -130,7 +175,7 @@ nav button:hover{
 
 .sec2-boxes{
     display: flex;
-    width: 100%;
+    /* width: 100%; */
     justify-content: space-between;
     column-gap: 2rem;
 }
@@ -146,6 +191,7 @@ nav button:hover{
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    width: 100%;
 }
 
 .emoji{
@@ -155,6 +201,7 @@ nav button:hover{
 .theme{
     font-size: 1.3rem;
     color: var(--secondary-font-color);
+    text-align: center;
 }
 
 .text{
@@ -233,6 +280,13 @@ nav button:hover{
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    transition: transform 0.2s ease;
+
+}   
+
+.food-box:hover{
+    filter: brightness(110%);
+    transform: translateY(-5px);
 }   
 
 .starterImg{
@@ -290,7 +344,7 @@ nav button:hover{
     align-items: center;
     flex-direction: column;
     width: var(--main-section-width);
-    margin-bottom: var(--section-bottom-margin);
+    margin-bottom: 4rem;
     padding: 2.5rem 2.5rem;
     border-radius: var(--box-radius);
 }
@@ -302,7 +356,7 @@ nav button:hover{
     align-items: center;
     flex-direction: column;
     width: var(--main-section-width);
-    margin-bottom: var(--main-content-margin-bottom);
+    margin-bottom: 4rem;
     padding: 2.5rem 2.5rem;
     border-radius: var(--box-radius);
 }
@@ -318,3 +372,179 @@ nav button:hover{
     text-align: center;
 }
 
+
+
+                /* Media query */
+
+@media only screen and (max-width: 600px) {
+
+header{
+    height: 5rem;
+}
+
+.header-logo {
+    max-width: auto;
+    max-height: 50px;
+    margin-left: 1rem;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    /* margin-right: 2rem ; */
+}
+
+h1{
+    text-align: center;
+    font-size: 2rem;
+}
+
+h1,h2{
+    margin-bottom: var(--headers-margin-bottom);
+}
+
+h2{
+    font-size: var(--font-section);
+    text-align: center;
+}
+
+
+
+.section-1{
+    min-height: 30vh;
+    margin-top: var(--margin-topBottom-main-content-mobile);
+    margin-bottom: var(--section-bottom-margin-mobile);
+    display: flex;
+    width: var(--width-mobile);
+}
+
+.section-1 h1{
+    font-size: 2rem;
+}
+
+.section-1 h2{
+    font-size: 1.4rem;
+}
+
+
+.section-2{
+    width: var(--width-mobile);
+    margin-bottom: var(--section-bottom-margin-mobile);
+}
+
+
+
+.sec2-boxes{
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.sec2-box{
+    flex: 0 0 100%;
+    padding: 0.8rem 1rem;
+}
+
+.emoji{
+    font-size: 1.8rem;
+}
+
+.theme{
+    font-size: 1.2rem;
+}
+
+.text{
+    font-size: 0.9rem;
+}
+
+
+.section-3{
+    width: var(--width-mobile);
+    margin-bottom: var(--margin-topBottom-main-content-mobile);
+    padding: 1rem 1rem;
+    line-height: 1.8;
+}
+
+.section-3 p{
+    color: var(--third-font-color);
+    font-size: 0.9rem;
+}
+
+
+.menu{
+    margin-top: var(--margin-topBottom-main-content-mobile);
+}
+
+.menu h2{
+    margin-bottom: var(--headers-margin-bottom);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--width-mobile);
+}  
+
+.food-container{
+    width: var(--width-mobile);
+    margin-bottom: var(--section-bottom-margin);
+    min-height: 40vh;  
+    flex-direction: column;
+}
+
+.food-container-last{
+    width: var(--width-mobile);
+    margin-bottom: var(--margin-topBottom-main-content-mobile);
+    min-height: 40vh;
+}
+
+.starterImg{
+    flex: 0 0 200px;
+}
+
+.food-details-name{
+    font-size: var(--foodName-font-size-mobile);
+}
+
+.food-details-description{
+    margin: var(--foodBox-description-margin-top-bottom);
+    line-height: 1.5;
+    font-size: 0.9;
+}
+
+.food-details-price{
+    font-size: var(--price-font-size-mobile);
+    font-weight: bold;
+}
+
+
+.food-container-last{
+    width: var(--width-mobile);
+    margin-bottom: var(--margin-topBottom-main-content-mobile);
+    flex-direction: column;
+}
+
+
+
+.about{
+    margin-top: var(--margin-topBottom-main-content-mobile);
+}
+
+.about-section{
+    width: var(--width-mobile);
+    padding: 2rem 2rem;
+    margin-bottom: 4rem;
+}
+
+.about-section-last{
+    width: var(--width-mobile);
+    padding: 2rem 2rem;
+    margin-bottom: 4rem;
+}
+
+.about-section-text{
+    line-height: 1.8;
+    font-size: 0.9rem;
+}
+
+
+}                
