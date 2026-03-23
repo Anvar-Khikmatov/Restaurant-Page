@@ -1,13 +1,12 @@
-import  imgSrc from './img/main-logo.webp'
+import imgSrc from './img/main-logo.webp'
 
-export function loadHome(){
-
+export function loadHome() {
     const content = document.getElementById('content');
 
-    function createElement(element, classname, content){
+    function createElement(element, classname, content) {
         element = document.createElement(element);
-        if(classname) element.classList.add(classname);
-        if(content) element.textContent = content;
+        if (classname) element.classList.add(classname);
+        if (content) element.textContent = content;
         return element;
     }
 
@@ -24,12 +23,12 @@ export function loadHome(){
     section1Header1.textContent = "Caravan Kitchen";
 
     const section1Header2 = document.createElement('h2');
-    section1Header2.textContent = "Gourmet taste, nomadic soul"; 
+    section1Header2.textContent = "Gourmet taste, nomadic soul";
 
     const mainLogo = document.createElement('img');
     mainLogo.classList.add('main-logo');
     mainLogo.src = imgSrc;
-    mainLogo.alt="National Uzbek Food";
+    mainLogo.alt = "National Uzbek Food";
 
     section1.append(section1Header1, section1Header2, mainLogo);
 

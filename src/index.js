@@ -1,7 +1,7 @@
 import './style.css'
-import {loadHome} from './home.js'
-import {loadMenu} from './menu.js'
-import {loadAbout} from './about.js'
+import { loadHome } from './home.js'
+import { loadMenu } from './menu.js'
+import { loadAbout } from './about.js'
 import logo from './img/karavan.png'
 
 
@@ -9,17 +9,17 @@ const homeBtn = document.querySelector('.home-btn');
 const menuBtn = document.querySelector('.menu-btn');
 const aboutBtn = document.querySelector('.about-btn');
 const headerLogo = document.querySelector('.header-logo');
-headerLogo.src = logo;      
+headerLogo.src = logo;
 
 
-function clearContent(){
+function clearContent() {
     document.getElementById('content').innerHTML = "";
 }
 
-function setActiveBtn(btn){
+function setActiveBtn(btn) {
     [homeBtn, menuBtn, aboutBtn].forEach(b => b.classList.remove('active-btn-colors'))
     btn.classList.add('active-btn-colors');
-}   
+}
 
 headerLogo.addEventListener('click', () => {
     clearContent();
