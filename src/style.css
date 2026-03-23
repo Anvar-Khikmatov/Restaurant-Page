@@ -352,18 +352,6 @@ nav button:hover::after {
     border-radius: var(--box-radius);
 }
 
-.about-section-last {
-    background-color: var(--secondary-background-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    width: var(--main-section-width);
-    margin-bottom: 4rem;
-    padding: 2.5rem 2.5rem;
-    border-radius: var(--box-radius);
-}
-
 .about-section-header {
     color: var(--secondary-font-color);
 }
