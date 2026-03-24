@@ -25,7 +25,7 @@
     --section-header-font: 2rem;
     --box-radius: 0.6rem;
 
-    --margin-topBottom-main-content-mobile: 2rem;
+    --margin-bottom-mobile: 2rem;
     --font-section: 1.8rem;
     --width-mobile: 85vw;
     --section-bottom-margin-mobile: 6rem;
@@ -258,21 +258,9 @@ nav button:hover::after {
     width: var(--main-section-width);
     margin-bottom: var(--section-bottom-margin);
     min-height: 60vh;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.food-container-last {
-    width: var(--main-section-width);
-    margin-bottom: var(--main-content-margin-bottom);
-    min-height: 60vh;
-    display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
-    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -302,7 +290,7 @@ nav button:hover::after {
     height: 100%;
 }
 
-.starterDetails1 {
+.starter-details-one {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -381,10 +369,10 @@ nav button:hover::after {
 
     nav {
         display: flex;
-        flex-direction: column;
         gap: 0.5rem;
         font-size: 0.8rem;
-        /* margin-right: 2rem ; */
+        flex-grow: 1;
+        justify-content: space-evenly;
     }
 
     h1 {
@@ -477,16 +465,16 @@ nav button:hover::after {
     }
 
     .food-container {
+        display: grid;
+        grid-template-columns: 1fr;
         width: var(--width-mobile);
         margin-bottom: var(--section-bottom-margin);
         min-height: 40vh;
-        flex-direction: column;
     }
 
-    .food-container-last {
-        width: var(--width-mobile);
-        margin-bottom: var(--margin-topBottom-main-content-mobile);
-        min-height: 40vh;
+    /* selects the last .food-container automatically */
+    .food-container:last-of-type {
+        margin-bottom: var(--margin-bottom-mobile);
     }
 
     .starterImg {
