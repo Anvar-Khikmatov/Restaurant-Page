@@ -25,7 +25,7 @@
     --section-header-font: 2rem;
     --box-radius: 0.6rem;
 
-    --margin-bottom-mobile: 2rem;
+    --margin-top-bottom-mobile: 2rem;
     --font-section: 1.8rem;
     --width-mobile: 85vw;
     --section-bottom-margin-mobile: 6rem;
@@ -394,7 +394,7 @@ nav button:hover::after {
 
     .section-1 {
         min-height: 30vh;
-        margin-top: var(--margin-topBottom-main-content-mobile);
+        margin-top: var(--margin-top-bottom-mobile);
         margin-bottom: var(--section-bottom-margin-mobile);
         display: flex;
         width: var(--width-mobile);
@@ -441,7 +441,7 @@ nav button:hover::after {
 
     .section-3 {
         width: var(--width-mobile);
-        margin-bottom: var(--margin-topBottom-main-content-mobile);
+        margin-bottom: var(--margin-top-bottom-mobile);
         padding: 1rem 1rem;
         line-height: 1.8;
     }
@@ -453,7 +453,7 @@ nav button:hover::after {
 
 
     .menu {
-        margin-top: var(--margin-topBottom-main-content-mobile);
+        margin-top: var(--margin-top-bottom-mobile);
     }
 
     .menu h2 {
@@ -474,7 +474,7 @@ nav button:hover::after {
 
     /* selects the last .food-container automatically */
     .food-container:last-of-type {
-        margin-bottom: var(--margin-bottom-mobile);
+        margin-bottom: var(--margin-top-bottom-mobile);
     }
 
     .starterImg {
@@ -496,26 +496,11 @@ nav button:hover::after {
         font-weight: bold;
     }
 
-
-    .food-container-last {
-        width: var(--width-mobile);
-        margin-bottom: var(--margin-topBottom-main-content-mobile);
-        flex-direction: column;
-    }
-
-
-
     .about {
-        margin-top: var(--margin-topBottom-main-content-mobile);
+        margin-top: var(--margin-top-bottom-mobile);
     }
 
     .about-section {
-        width: var(--width-mobile);
-        padding: 2rem 2rem;
-        margin-bottom: 4rem;
-    }
-
-    .about-section-last {
         width: var(--width-mobile);
         padding: 2rem 2rem;
         margin-bottom: 4rem;
