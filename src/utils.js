@@ -1,7 +1,7 @@
 export const propertyType = {
-    SRC: "src",
-    CLASS: "class",
-    ID: "id",
+    SRC: 'src',
+    CLASS: 'class',
+    ID: 'id',
 };
 
 export function createElement(elementType, attribute, attributeValue) {
