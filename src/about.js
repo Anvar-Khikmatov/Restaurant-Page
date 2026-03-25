@@ -8,17 +8,17 @@ export function loadAbout() {
 
     const aboutSectionOne = createSection(
         'Our Story',
-        "Caravan Kitchen was born from a love for Uzbek culinary traditions. Inspired by the rich flavors of the Silk Road, we bring authentic recipes to life using fresh, local ingredients. Since our opening, we’ve been serving classic dishes like plov, somsa, and shashlik, crafted with care by our skilled chefs, all in a warm, inviting atmosphere that celebrates the spirit of Uzbek hospitality."
+        'Caravan Kitchen was born from a love for Uzbek culinary traditions. Inspired by the rich flavors of the Silk Road, we bring authentic recipes to life using fresh, local ingredients. Since our opening, we’ve been serving classic dishes like plov, somsa, and shashlik, crafted with care by our skilled chefs, all in a warm, inviting atmosphere that celebrates the spirit of Uzbek hospitality.'
     );
 
     const aboutSectionTwo = createSection(
         'Location',
-        "📍 5 Usta Olim St, 100109 <br>  Tashkent, Uzbekistan"
+        '📍 5 Usta Olim St, 100109 <br>  Tashkent, Uzbekistan'
     );
 
     const menuSectionThree = createSection(
-        "Contact",
-        "📞 (71) 006 77 67 <br>📧  caravan@assist.com",
+        'Contact',
+        '📞 (71) 006 77 67 <br>📧  caravan@assist.com',
     );
 
     aboutDiv.append(aboutSectionOne, aboutSectionTwo, menuSectionThree);

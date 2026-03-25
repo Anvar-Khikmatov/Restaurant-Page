@@ -216,14 +216,11 @@ nav button:hover::after {
 
 .section-3 {
     background-color: var(--secondary-background-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     width: var(--main-section-width);
     margin-bottom: var(--main-content-margin-bottom);
     padding: 1rem 2rem;
     line-height: 2;
+    text-align: center;
 }
 
 .section-3 h2 {
