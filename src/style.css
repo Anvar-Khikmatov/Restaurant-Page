@@ -139,7 +139,7 @@ nav button:hover::after {
     align-items: center;
 }
 
-.section-1 {
+.section-one {
     min-height: 90vh;
     margin-top: var(--main-content-margin-top);
     margin-bottom: var(--section-bottom-margin);
@@ -150,12 +150,12 @@ nav button:hover::after {
     width: var(--main-section-width);
 }
 
-.section-1 h1 {
+.section-one h1 {
     font-size: 2.8rem;
     color: var(--secondary-font-color);
 }
 
-.section-1 h2 {
+.section-one h2 {
     font-size: 1.8rem;
 }
 
@@ -164,7 +164,7 @@ nav button:hover::after {
     border-radius: var(--box-radius);
 }
 
-.section-2 {
+.section-two {
     /* background-color: rgb(76, 56, 30); */
     display: flex;
     justify-content: center;
@@ -176,14 +176,15 @@ nav button:hover::after {
 
 
 
-.sec2-boxes {
-    display: flex;
+.section-two-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     /* width: 100%; */
     justify-content: space-between;
     column-gap: 2rem;
 }
 
-.sec2-box {
+.section-two-box {
     background-color: var(--secondary-background-color);
     min-height: 15rem;
     flex: 1;
@@ -214,7 +215,7 @@ nav button:hover::after {
     color: var(--third-font-color);
 }
 
-.section-3 {
+.section-three {
     background-color: var(--secondary-background-color);
     width: var(--main-section-width);
     margin-bottom: var(--main-content-margin-bottom);
@@ -223,11 +224,11 @@ nav button:hover::after {
     text-align: center;
 }
 
-.section-3 h2 {
+.section-three h2 {
     color: var(--secondary-font-color);
 }
 
-.section-3 p {
+.section-three p {
     color: var(--third-font-color);
     font-size: 1rem;
 }
@@ -389,7 +390,7 @@ nav button:hover::after {
 
 
 
-    .section-1 {
+    .section-one {
         min-height: 30vh;
         margin-top: var(--margin-top-bottom-mobile);
         margin-bottom: var(--section-bottom-margin-mobile);
@@ -397,28 +398,29 @@ nav button:hover::after {
         width: var(--width-mobile);
     }
 
-    .section-1 h1 {
+    .section-one h1 {
         font-size: 2rem;
     }
 
-    .section-1 h2 {
+    .section-one h2 {
         font-size: 1.4rem;
     }
 
 
-    .section-2 {
+    .section-two {
         width: var(--width-mobile);
         margin-bottom: var(--section-bottom-margin-mobile);
     }
 
 
 
-    .sec2-boxes {
+    .section-two-boxes {
+        display: grid;
+        grid-template-columns: 1fr;
         gap: 2rem;
-        flex-wrap: wrap;
     }
 
-    .sec2-box {
+    .section-two-box {
         flex: 0 0 100%;
         padding: 0.8rem 1rem;
     }
@@ -436,14 +438,14 @@ nav button:hover::after {
     }
 
 
-    .section-3 {
+    .section-three {
         width: var(--width-mobile);
         margin-bottom: var(--margin-top-bottom-mobile);
         padding: 1rem 1rem;
         line-height: 1.8;
     }
 
-    .section-3 p {
+    .section-three p {
         color: var(--third-font-color);
         font-size: 0.9rem;
     }
