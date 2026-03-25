@@ -1,86 +1,97 @@
+import { propertyType, createElement } from './utils';
 import imgSrc from './img/main-logo.webp'
 
 export function loadHome() {
     const content = document.getElementById('content');
 
-    function createElement(element, classname, content) {
-        element = document.createElement(element);
-        if (classname) element.classList.add(classname);
-        if (content) element.textContent = content;
-        return element;
-    }
+    const home = createElement('div', propertyType.CLASS, 'home');
 
-
-    const home = document.createElement('div');
-    home.classList.add('home')
     content.append(home);
 
-    const section1 = document.createElement('div');
-    section1.classList.add('section-1')
+    home.append(createSectionOne(), createSectionTwo(), createSectionThree());
+}
+
+function createSectionOne() {
+    const sectionOne = createElement('div', propertyType.CLASS, 'section-one');
+
+    const sectionOneHeader = createElement('h1');
+    sectionOneHeader.textContent = 'Caravan Kitchen';
+
+    const sectionOneSubHeader = createElement('h2');
+    sectionOneSubHeader.textContent = 'Gourmet taste, nomadic soul';
+
+    const sectionOneImage = new Image();
+    sectionOneImage.classList.add('main-logo');
+    sectionOneImage.src = imgSrc;
+    sectionOneImage.alt = 'National Uzbek Food';
+
+    sectionOne.append(sectionOneHeader, sectionOneSubHeader, sectionOneImage);
+
+    return sectionOne;
+}
+
+function createSectionTwoBox(emojiHeader, subHeaderText, bodyText) {
+    const sectionBox = createElement('div', propertyType.CLASS, 'section-two-box');
+
+    const header = createElement('p', propertyType.CLASS, 'emoji');
+    header.innerText = emojiHeader;
+
+    const subHeader = createElement('p', propertyType.CLASS, 'theme');
+    subHeader.innerText = subHeaderText;
+
+    const body = createElement('p', propertyType.CLASS, 'text');
+    body.innerText = bodyText;
+
+    sectionBox.append(header, subHeader, body);
+
+    return sectionBox;
+}
+
+function createSectionTwo() {
+    const sectionTwo = createElement('div', propertyType.CLASS, 'section-two');
+
+    const sectionTwoHeader = createElement('h2');
+    sectionTwoHeader.textContent = 'Our Specialties';
+
+    const sectionTwoBoxes = createElement('div', propertyType.CLASS, 'section-two-boxes');
 
 
-    const section1Header1 = document.createElement('h1');
-    section1Header1.textContent = "Caravan Kitchen";
+    const firstSec2Box = createSectionTwoBox(
+        '🔥',
+        'Our Heritage',
+        'Traditional recipes crafted with rich spices and time-honored techniques'
+    );
 
-    const section1Header2 = document.createElement('h2');
-    section1Header2.textContent = "Gourmet taste, nomadic soul";
+    const secondSec2Box = createSectionTwoBox(
+        '🍽️',
+        'Caravan Hostpitality',
+        'Warm service inspired by the Silk Road traditions of sharing and gathering'
+    );
 
-    const mainLogo = document.createElement('img');
-    mainLogo.classList.add('main-logo');
-    mainLogo.src = imgSrc;
-    mainLogo.alt = "National Uzbek Food";
+    const thirdSec2Box = createSectionTwoBox(
+        '👨‍🍳',
+        'Culinary Craftsmanship',
+        'Every dish prepared with care, skill, and respect for Uzbek culinary roots'
+    );
 
-    section1.append(section1Header1, section1Header2, mainLogo);
+    sectionTwoBoxes.append(firstSec2Box, secondSec2Box, thirdSec2Box);
 
+    sectionTwo.append(sectionTwoHeader, sectionTwoBoxes);
 
+    return sectionTwo;
+}
 
-    const section2 = document.createElement('div');
-    section2.classList.add('section-2')
+function createSectionThree() {
+    const sectionThree = createElement('div', propertyType.CLASS, 'section-three');
 
+    const sectionThreeHeader = createElement('h2');
+    sectionThreeHeader.textContent = 'Opening Hours';
 
-    const section2Header2 = document.createElement('h2');
-    section2Header2.textContent = "Our Specialties";
+    const sectionThreeBody = createElement('p');
+    sectionThreeBody.innerHTML = 'Mon - Fri: 11:00 AM - 10:00 PM <br> Saturday: 12:00 PM - 11:00 PM <br> Sunday: Closed';
 
-    const sec2Boxes = document.createElement('div');
-    sec2Boxes.classList.add('sec2-boxes')
-    section2.append(section2Header2, sec2Boxes);
+    sectionThree.append(sectionThreeHeader, sectionThreeBody);
 
-    const firstSec2Box = document.createElement('div');
-    firstSec2Box.classList.add('sec2-box');
-    const emoji1 = createElement('p', "emoji", "🔥");
-    const theme1 = createElement('p', "theme", "Our Heritage");
-    const text1 = createElement('p', "text", "Traditional recipes crafted with rich spices and time-honored techniques");
-    firstSec2Box.append(emoji1, theme1, text1);
-
-    const secondSec2Box = document.createElement('div');
-    secondSec2Box.classList.add('sec2-box');
-    const emoji2 = createElement('p', "emoji", "🍽️");
-    const theme2 = createElement('p', "theme", "Caravan Hospitality");
-    const text2 = createElement('p', "text", "Warm service inspired by the Silk Road traditions of sharing and gathering");
-    secondSec2Box.append(emoji2, theme2, text2);
-
-    const thirdSec2Box = document.createElement('div');
-    thirdSec2Box.classList.add('sec2-box');
-    const emoji3 = createElement('p', "emoji", "👨‍🍳");
-    const theme3 = createElement('p', "theme", "Culinary Craftsmanship");
-    const text3 = createElement('p', "text", "Every dish prepared with care, skill, and respect for Uzbek culinary roots");
-    thirdSec2Box.append(emoji3, theme3, text3);
-
-    sec2Boxes.append(firstSec2Box, secondSec2Box, thirdSec2Box);
-
-
-    const section3 = document.createElement('div');
-    section3.classList.add('section-3')
-
-
-    const sec3Header = createElement('h2', null, "Opening Hours");
-    const sec3p1 = createElement('p', null, "Mon – Fri: 11:00 AM – 10:00 PM");
-    const sec3p2 = createElement('p', null, "Saturday: 12:00 PM – 11:00 PM");
-    const sec3p3 = createElement('p', null, "Sunday: Closed");
-
-    section3.append(sec3Header, sec3p1, sec3p2, sec3p3);
-
-
-    home.append(section1, section2, section3);
+    return sectionThree;
 
 }
