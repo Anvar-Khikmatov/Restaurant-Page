@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=MedievalSharp&family=Orbitron:wght@400..900&display=swap');
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
 }
 
-:root{
+:root {
     --background-color: #0f0f0f;
     --secondary-background-color: #252323;
     --secondary-font-color: rgb(230, 142, 54);
@@ -23,7 +25,7 @@
     --section-header-font: 2rem;
     --box-radius: 0.6rem;
 
-    --margin-topBottom-main-content-mobile: 2rem;
+    --margin-top-bottom-mobile: 2rem;
     --font-section: 1.8rem;
     --width-mobile: 85vw;
     --section-bottom-margin-mobile: 6rem;
@@ -31,33 +33,34 @@
     --price-font-size-mobile: 1.2rem;
 }
 
-body{
+body {
     background-color: var(--background-color);
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: white;
 }
 
-h1{
+h1 {
     font-family: 'Javar', sans-serif;
     text-align: center;
     /* font-weight: 600; */
 }
 
-h1,h2{
+h1,
+h2 {
     margin-bottom: var(--headers-margin-bottom);
 }
 
-h2{
+h2 {
     font-size: var(--section-header-font);
     text-align: center;
 }
 
-h3{
+h3 {
     margin-left: 2rem;
     color: white;
 }
 
-header{
+header {
     height: 5rem;
     background-color: var(--secondary-background-color);
     display: flex;
@@ -80,17 +83,17 @@ header{
     cursor: pointer;
 }
 
-nav{
+nav {
     display: flex;
     gap: 2rem;
-    margin-right: 2rem ;
+    margin-right: 2rem;
 }
 
-.active-btn-colors{
+.active-btn-colors {
     color: var(--secondary-font-color);
 }
 
-nav button{
+nav button {
     background: none;
     border: none;
     padding: 0;
@@ -99,7 +102,7 @@ nav button{
     cursor: pointer;
 }
 
-nav button:hover{
+nav button:hover {
     color: var(--secondary-font-color);
     filter: brightness(130%);
 }
@@ -124,19 +127,19 @@ nav button:hover::after {
 }
 
 
-        /* Content */
-#content{
+/* Content */
+#content {
     min-height: 100vh;
 }
 
-.home{
+.home {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.section-1{
+.section-one {
     min-height: 90vh;
     margin-top: var(--main-content-margin-top);
     margin-bottom: var(--section-bottom-margin);
@@ -147,21 +150,21 @@ nav button:hover::after {
     width: var(--main-section-width);
 }
 
-.section-1 h1{
+.section-one h1 {
     font-size: 2.8rem;
     color: var(--secondary-font-color);
 }
 
-.section-1 h2{
+.section-one h2 {
     font-size: 1.8rem;
 }
 
-.main-logo{
+.main-logo {
     width: 100%;
     border-radius: var(--box-radius);
 }
 
-.section-2{
+.section-two {
     /* background-color: rgb(76, 56, 30); */
     display: flex;
     justify-content: center;
@@ -173,14 +176,15 @@ nav button:hover::after {
 
 
 
-.sec2-boxes{
-    display: flex;
+.section-two-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     /* width: 100%; */
     justify-content: space-between;
     column-gap: 2rem;
 }
 
-.sec2-box{
+.section-two-box {
     background-color: var(--secondary-background-color);
     min-height: 15rem;
     flex: 1;
@@ -194,47 +198,44 @@ nav button:hover::after {
     width: 100%;
 }
 
-.emoji{
+.emoji {
     font-size: 2rem;
 }
 
-.theme{
+.theme {
     font-size: 1.3rem;
     color: var(--secondary-font-color);
     text-align: center;
 }
 
-.text{
+.text {
     font-size: 1rem;
     text-align: center;
     line-height: 1.8;
     color: var(--third-font-color);
 }
 
-.section-3{
+.section-three {
     background-color: var(--secondary-background-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     width: var(--main-section-width);
     margin-bottom: var(--main-content-margin-bottom);
     padding: 1rem 2rem;
     line-height: 2;
+    text-align: center;
 }
 
-.section-3 h2{
+.section-three h2 {
     color: var(--secondary-font-color);
 }
 
-.section-3 p{
+.section-three p {
     color: var(--third-font-color);
     font-size: 1rem;
 }
 
 
-                                             /* Menu */
-.menu{
+/* Menu */
+.menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -243,37 +244,25 @@ nav button:hover::after {
 }
 
 
-.menu h2{
+.menu h2 {
     margin-bottom: var(--headers-margin-bottom);
     display: flex;
     justify-content: center;
     align-items: center;
     width: var(--main-section-width);
-}    
+}
 
-.food-container{
+.food-container {
     width: var(--main-section-width);
     margin-bottom: var(--section-bottom-margin);
     min-height: 60vh;
-    display: flex;  
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
-    justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.food-container-last{
-    width: var(--main-section-width);
-    margin-bottom: var(--main-content-margin-bottom);
-    min-height: 60vh;
-    display: flex;  
-    flex-direction: row;
-    gap: 1.5rem;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.food-box{
+.food-box {
     flex: 0 0 calc(33.33% - 1rem);
     background-color: var(--secondary-background-color);
     border-radius: var(--box-radius);
@@ -282,24 +271,24 @@ nav button:hover::after {
     flex-direction: column;
     transition: transform 0.2s ease;
 
-}   
+}
 
-.food-box:hover{
+.food-box:hover {
     filter: brightness(110%);
     transform: translateY(-5px);
-}   
+}
 
-.starterImg{
+.starterImg {
     flex: 0 0 240px;
     overflow: hidden;
 }
 
-.starterImg img{
+.starterImg img {
     width: 100%;
     height: 100%;
 }
 
-.starterDetails1{
+.starter-details-one {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -308,19 +297,19 @@ nav button:hover::after {
     padding: var(--foodBox-description-padding);
 }
 
-.food-details-name{
+.food-details-name {
     margin: 0;
     color: var(--secondary-font-color);
     font-size: var(--foodName-font-size);
 }
 
-.food-details-description{
+.food-details-description {
     margin: var(--foodBox-description-margin-top-bottom);
     line-height: 1.7;
     color: var(--third-font-color);
 }
 
-.food-details-price{
+.food-details-price {
     font-size: var(--price-font-size);
     font-weight: bold;
 }
@@ -328,8 +317,8 @@ nav button:hover::after {
 
 
 
-                            /* About */
-.about{
+/* About */
+.about {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -337,7 +326,7 @@ nav button:hover::after {
     margin-top: var(--main-content-margin-top);
 }
 
-.about-section{
+.about-section {
     background-color: var(--secondary-background-color);
     display: flex;
     justify-content: space-between;
@@ -349,23 +338,11 @@ nav button:hover::after {
     border-radius: var(--box-radius);
 }
 
-.about-section-last{
-    background-color: var(--secondary-background-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    width: var(--main-section-width);
-    margin-bottom: 4rem;
-    padding: 2.5rem 2.5rem;
-    border-radius: var(--box-radius);
-}
-
-.about-section-header{
+.about-section-header {
     color: var(--secondary-font-color);
 }
 
-.about-section-text{
+.about-section-text {
     color: var(--third-font-color);
     line-height: 2;
     display: flex;
@@ -374,177 +351,162 @@ nav button:hover::after {
 
 
 
-                /* Media query */
+/* Media query */
 
 @media only screen and (max-width: 600px) {
 
-header{
-    height: 5rem;
+    header {
+        height: 5rem;
+    }
+
+    .header-logo {
+        max-width: auto;
+        max-height: 50px;
+        margin-left: 1rem;
+    }
+
+    nav {
+        display: flex;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+        flex-grow: 1;
+        justify-content: space-evenly;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    h1,
+    h2 {
+        margin-bottom: var(--headers-margin-bottom);
+    }
+
+    h2 {
+        font-size: var(--font-section);
+        text-align: center;
+    }
+
+
+
+    .section-one {
+        min-height: 30vh;
+        margin-top: var(--margin-top-bottom-mobile);
+        margin-bottom: var(--section-bottom-margin-mobile);
+        display: flex;
+        width: var(--width-mobile);
+    }
+
+    .section-one h1 {
+        font-size: 2rem;
+    }
+
+    .section-one h2 {
+        font-size: 1.4rem;
+    }
+
+
+    .section-two {
+        width: var(--width-mobile);
+        margin-bottom: var(--section-bottom-margin-mobile);
+    }
+
+
+
+    .section-two-boxes {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .section-two-box {
+        flex: 0 0 100%;
+        padding: 0.8rem 1rem;
+    }
+
+    .emoji {
+        font-size: 1.8rem;
+    }
+
+    .theme {
+        font-size: 1.2rem;
+    }
+
+    .text {
+        font-size: 0.9rem;
+    }
+
+
+    .section-three {
+        width: var(--width-mobile);
+        margin-bottom: var(--margin-top-bottom-mobile);
+        padding: 1rem 1rem;
+        line-height: 1.8;
+    }
+
+    .section-three p {
+        color: var(--third-font-color);
+        font-size: 0.9rem;
+    }
+
+
+    .menu {
+        margin-top: var(--margin-top-bottom-mobile);
+    }
+
+    .menu h2 {
+        margin-bottom: var(--headers-margin-bottom);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: var(--width-mobile);
+    }
+
+    .food-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: var(--width-mobile);
+        margin-bottom: var(--section-bottom-margin);
+        min-height: 40vh;
+    }
+
+    /* selects the last .food-container automatically */
+    .food-container:last-of-type {
+        margin-bottom: var(--margin-top-bottom-mobile);
+    }
+
+    .starterImg {
+        flex: 0 0 200px;
+    }
+
+    .food-details-name {
+        font-size: var(--foodName-font-size-mobile);
+    }
+
+    .food-details-description {
+        margin: var(--foodBox-description-margin-top-bottom);
+        line-height: 1.5;
+        font-size: 0.9;
+    }
+
+    .food-details-price {
+        font-size: var(--price-font-size-mobile);
+        font-weight: bold;
+    }
+
+    .about {
+        margin-top: var(--margin-top-bottom-mobile);
+    }
+
+    .about-section {
+        width: var(--width-mobile);
+        padding: 2rem 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .about-section-text {
+        line-height: 1.8;
+        font-size: 0.9rem;
+    }
 }
-
-.header-logo {
-    max-width: auto;
-    max-height: 50px;
-    margin-left: 1rem;
-}
-
-nav{
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    font-size: 0.8rem;
-    /* margin-right: 2rem ; */
-}
-
-h1{
-    text-align: center;
-    font-size: 2rem;
-}
-
-h1,h2{
-    margin-bottom: var(--headers-margin-bottom);
-}
-
-h2{
-    font-size: var(--font-section);
-    text-align: center;
-}
-
-
-
-.section-1{
-    min-height: 30vh;
-    margin-top: var(--margin-topBottom-main-content-mobile);
-    margin-bottom: var(--section-bottom-margin-mobile);
-    display: flex;
-    width: var(--width-mobile);
-}
-
-.section-1 h1{
-    font-size: 2rem;
-}
-
-.section-1 h2{
-    font-size: 1.4rem;
-}
-
-
-.section-2{
-    width: var(--width-mobile);
-    margin-bottom: var(--section-bottom-margin-mobile);
-}
-
-
-
-.sec2-boxes{
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.sec2-box{
-    flex: 0 0 100%;
-    padding: 0.8rem 1rem;
-}
-
-.emoji{
-    font-size: 1.8rem;
-}
-
-.theme{
-    font-size: 1.2rem;
-}
-
-.text{
-    font-size: 0.9rem;
-}
-
-
-.section-3{
-    width: var(--width-mobile);
-    margin-bottom: var(--margin-topBottom-main-content-mobile);
-    padding: 1rem 1rem;
-    line-height: 1.8;
-}
-
-.section-3 p{
-    color: var(--third-font-color);
-    font-size: 0.9rem;
-}
-
-
-.menu{
-    margin-top: var(--margin-topBottom-main-content-mobile);
-}
-
-.menu h2{
-    margin-bottom: var(--headers-margin-bottom);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: var(--width-mobile);
-}  
-
-.food-container{
-    width: var(--width-mobile);
-    margin-bottom: var(--section-bottom-margin);
-    min-height: 40vh;  
-    flex-direction: column;
-}
-
-.food-container-last{
-    width: var(--width-mobile);
-    margin-bottom: var(--margin-topBottom-main-content-mobile);
-    min-height: 40vh;
-}
-
-.starterImg{
-    flex: 0 0 200px;
-}
-
-.food-details-name{
-    font-size: var(--foodName-font-size-mobile);
-}
-
-.food-details-description{
-    margin: var(--foodBox-description-margin-top-bottom);
-    line-height: 1.5;
-    font-size: 0.9;
-}
-
-.food-details-price{
-    font-size: var(--price-font-size-mobile);
-    font-weight: bold;
-}
-
-
-.food-container-last{
-    width: var(--width-mobile);
-    margin-bottom: var(--margin-topBottom-main-content-mobile);
-    flex-direction: column;
-}
-
-
-
-.about{
-    margin-top: var(--margin-topBottom-main-content-mobile);
-}
-
-.about-section{
-    width: var(--width-mobile);
-    padding: 2rem 2rem;
-    margin-bottom: 4rem;
-}
-
-.about-section-last{
-    width: var(--width-mobile);
-    padding: 2rem 2rem;
-    margin-bottom: 4rem;
-}
-
-.about-section-text{
-    line-height: 1.8;
-    font-size: 0.9rem;
-}
-
-
-}                
