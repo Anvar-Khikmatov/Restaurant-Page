@@ -2,9 +2,8 @@
 
 A dynamic restaurant website built with vanilla JavaScript and Webpack. All page content is generated through DOM manipulation — no content is hardcoded in HTML. Built as part of The Odin Project curriculum.
 
-## Live Demo
 
-[View on GitHub Pages](https://anvar-khikmatov.github.io/Restaurant-Page) 
+[Live Demo](https://anvar-khikmatov.github.io/Restaurant-Page) 
 
 ## Features
 
